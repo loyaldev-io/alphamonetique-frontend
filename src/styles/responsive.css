@@ -1,0 +1,31 @@
+/* ═══════════════════════════════════════════════════════════
+   ALPHA MONÉTIQUE — Responsive
+   Fichier : src/styles/responsive.css
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Tablette — max 1024px ── */
+@media (max-width: 1024px) {
+    :root {
+        --section-padding: 80px;
+    }
+}
+
+/* ── Mobile — max 768px ── */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 64px;
+        --container-padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Petit mobile — max 480px ── */
+@media (max-width: 480px) {
+    :root {
+        --section-padding: 48px;
+        --container-padding: 16px;
+    }
+}

@@ -1,0 +1,89 @@
+/* ═══════════════════════════════════════════════════════════
+   ALPHA MONÉTIQUE — Design System Variables
+   Fichier : src/styles/variables.css
+   ═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+    /* ── Couleurs de fond ── */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f5f9;
+    --surface: #f8fafc;
+
+    /* ── Bordures ── */
+    --border: #e2e8f0;
+    --border-glow: #2563eb33;
+
+    /* ── Bleu — couleur principale ── */
+    --blue-electric: #2563eb;
+    --blue-light: #3b82f6;
+    --blue-glow: #2563eb20;
+    --blue-subtle: #eff6ff;
+
+    /* ── Violet / Indigo ── */
+    --violet: #7c3aed;
+    --violet-light: #8b5cf6;
+    --violet-subtle: #f5f3ff;
+
+    /* ── Orange / Corail ── */
+    --orange: #f97316;
+    --orange-light: #fb923c;
+    --orange-subtle: #fff7ed;
+
+    /* ── Rose / Fuchsia ── */
+    --rose: #ec4899;
+    --rose-light: #f472b6;
+    --rose-subtle: #fdf2f8;
+
+    /* ── Cyan ── */
+    --cyan: #06b6d4;
+    --cyan-subtle: #ecfeff;
+
+    /* ── Textes ── */
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+
+    /* ── Couleurs utilitaires ── */
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+
+    /* ── Gradients ── */
+    --gradient-hero: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #ec4899 100%);
+    --gradient-card: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    --gradient-cta: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #7c3aed 100%);
+    --gradient-warm: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+    --gradient-cool: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+    --gradient-purple: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+
+    /* ── Ombres ── */
+    --shadow-glow: 0 0 40px #2563eb15, 0 0 80px #2563eb08;
+    --shadow-card: 0 2px 16px rgba(15, 23, 42, 0.08);
+    --shadow-btn: 0 4px 20px #2563eb35;
+
+    /* ── Rayons de bordure ── */
+    --radius: 12px;
+    --radius-lg: 20px;
+    --radius-full: 100px;
+
+    /* ── Transition par défaut ── */
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ── Typographies ── */
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* ── Espacements ── */
+    --section-padding: 120px;
+    --container-max: 1200px;
+    --container-padding: 24px;
+
+    /* ── Z-index ── */
+    --z-navbar: 1000;
+    --z-modal: 2000;
+    --z-overlay: 1500;
+}

@@ -1,0 +1,160 @@
+/* ═══════════════════════════════════════════════════════════
+   ALPHA MONÉTIQUE — Animations
+   Fichier : src/styles/animations.css
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Fade In Up — animation d'entrée principale ── */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Fade In — simple apparition ── */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ── Flottement — cartes décoratives du hero ── */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ── Pulse — point vert de statut ── */
+@keyframes pulseDot {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* ── Pulse glow — lueur pulsante ── */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px #2563eb20;
+    }
+
+    50% {
+        box-shadow: 0 0 40px #2563eb40;
+    }
+}
+
+/* ── Slide In Left ── */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ── Slide In Right ── */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ── Scale In — pour les modales ── */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ── Scroll Reveal — classes utilitaires ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Délais d'animation pour le stagger ── */
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.delay-4 {
+    transition-delay: 0.4s;
+}
+
+.delay-5 {
+    transition-delay: 0.5s;
+}
+
+/* ── Animation d'entrée du hero ── */
+.hero-animate {
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.hero-animate-1 {
+    animation-delay: 0s;
+}
+
+.hero-animate-2 {
+    animation-delay: 0.1s;
+}
+
+.hero-animate-3 {
+    animation-delay: 0.2s;
+}
+
+.hero-animate-4 {
+    animation-delay: 0.3s;
+}

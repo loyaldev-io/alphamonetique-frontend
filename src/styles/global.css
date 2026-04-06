@@ -1,0 +1,354 @@
+/* ═══════════════════════════════════════════════════════════
+   ALPHA MONÉTIQUE — Styles Globaux
+   Fichier : src/styles/global.css
+   ═══════════════════════════════════════════════════════════ */
+
+@import './variables.css';
+@import './animations.css';
+@import './responsive.css';
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* ── Liens ── */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ── Images ── */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ── Listes ── */
+ul,
+ol {
+    list-style: none;
+}
+
+/* ── Boutons / Inputs ── */
+button,
+input,
+textarea,
+select {
+    font-family: var(--font-body);
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ══════════════════════════════════════════
+   LAYOUT UTILITAIRES
+   ══════════════════════════════════════════ */
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+    z-index: 1;
+}
+
+.section {
+    padding: var(--section-padding) 0;
+    position: relative;
+}
+
+/* ══════════════════════════════════════════
+   SECTION HEADER — réutilisable
+   ══════════════════════════════════════════ */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--blue-light);
+    margin-bottom: 16px;
+    background: #2563eb14;
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    border: 1px solid #2563eb25;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.15;
+}
+
+.section-subtitle {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ══════════════════════════════════════════
+   TEXTE GRADIENT
+   ══════════════════════════════════════════ */
+
+.gradient-text {
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 55%, #ec4899 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 5s ease infinite;
+}
+
+.gradient-text-warm {
+    background: linear-gradient(135deg, #f97316 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-purple {
+    background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ══════════════════════════════════════════
+   BOUTONS
+   ══════════════════════════════════════════ */
+
+.btn-primary {
+    background: var(--gradient-cta);
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-body);
+    box-shadow: var(--shadow-btn);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px #2563eb50;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-body);
+}
+
+.btn-secondary:hover {
+    border-color: var(--blue-light);
+    background: #2563eb10;
+}
+
+.btn-white {
+    background: #fff;
+    color: var(--blue-electric);
+    border: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: var(--transition);
+}
+
+.btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px #00000030;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #ffffff50;
+    padding: 12px 32px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: var(--transition);
+}
+
+.btn-ghost:hover {
+    border-color: #fff;
+    background: #ffffff15;
+}
+
+/* ══════════════════════════════════════════
+   FORMULAIRES
+   ══════════════════════════════════════════ */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-family: var(--font-body);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--blue-electric);
+    box-shadow: 0 0 0 3px #2563eb20;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group select option {
+    background: var(--bg-card);
+}
+
+/* ══════════════════════════════════════════
+   EFFETS DÉCORATIFS
+   ══════════════════════════════════════════ */
+
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+}
+
+.glow-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glow-orb-1 {
+    width: 600px;
+    height: 600px;
+    background: #2563eb12;
+    top: -200px;
+    right: -200px;
+}
+
+.glow-orb-2 {
+    width: 400px;
+    height: 400px;
+    background: #06b6d410;
+    bottom: 20%;
+    left: -100px;
+}
+
+/* ══════════════════════════════════════════
+   PAGE HEADER — en-tête de page interne
+   ══════════════════════════════════════════ */
+
+.page-header {
+    padding: 160px 0 80px;
+    text-align: center;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: radial-gradient(ellipse at 50% 0%, #2563eb15 0%, transparent 70%);
+}
+
+.page-header h1 {
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.page-header p {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin: 0 auto;
+    position: relative;
+    line-height: 1.7;
+}
