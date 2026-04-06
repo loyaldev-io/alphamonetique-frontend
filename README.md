@@ -341,4 +341,100 @@ Projet développé pour **Alpha Monétique Interactif** — solutions de paiemen
 
 ## Licence
 
-Projet propriétaire — Tous droits réservés © 2026 Loyaldev.
+# 🚀 Alphamonétique
+
+<p align="center">
+  <img src="https://alphamonetique.com/assets/images/logo/ami.png" width="120" />
+</p>
+
+<p align="center">
+  💳 Solution monétique moderne • Paiement • Terminaux • Services professionnels
+</p>
+
+---
+
+## ✨ Présentation
+
+**Alphamonétique** est une plateforme spécialisée dans les solutions de paiement modernes pour les entreprises.
+
+Ce projet représente le **frontend officiel** du site, développé avec une stack moderne pour offrir performance, sécurité et expérience utilisateur optimale.
+
+---
+
+## 🛠️ Stack technique
+
+* ⚛️ React + Vite
+* 🟦 TypeScript
+* 🎨 CSS moderne / responsive
+* ⚡ Build optimisé
+
+---
+
+## 📸 Aperçu
+
+<p align="center">
+  <img src="https://alphamonetique.com/assets/images/logo/ami.png" width="300" />
+</p>
+
+---
+
+## 🚀 Installation
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+---
+
+## 🌍 Déploiement
+
+Ce projet est optimisé pour :
+
+* Netlify
+* Vercel
+* VPS (IIS / Node)
+
+---
+
+## 📁 Structure
+
+```bash
+src/
+ ├── components/
+ ├── pages/
+ ├── assets/
+ ├── styles/
+```
+
+---
+
+## 💼 Auteur
+
+Développé par **Loyaldev**
+
+* 🌐 https://loyaldev.io
+* 🚀 Création SaaS / CRM / plateformes
+
+---
+
+## ⭐ Support
+
+Si tu apprécies le projet :
+
+* ⭐ Star le repo
+* 🚀 Partage le projet
+
+---
+
+<p align="center">
+  🔥 Built with passion by Loyaldev
+</p>
