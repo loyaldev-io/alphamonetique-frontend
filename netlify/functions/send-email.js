@@ -7,11 +7,14 @@ const HEADERS = {
   'Content-Type': 'application/json',
 }
 
-// ── Emails des agences ──
-const EMAILS = {
-  guyane:     'alphamonetique@gmail.com',
-  martinique: 'alphamonetique972@gmail.com',
-}
+// ── Emails des agences (production) ──
+// const EMAILS = {
+//   guyane:     'alphamonetique@gmail.com',
+//   martinique: 'alphamonetique972@gmail.com',
+// }
+
+// ── Email de test ──
+const TEST_EMAIL = 'support@chrixcode.com'
 
 exports.handler = async (event) => {
   // Preflight CORS
@@ -41,15 +44,8 @@ exports.handler = async (event) => {
       },
     })
 
-    // ── Destinataire(s) ──
-    let recipients
-    if (type === 'contact' && data.agencyEmail) {
-      // Agence spécifique sélectionnée
-      recipients = [data.agencyEmail]
-    } else {
-      // Aucune agence sélectionnée ou devis → les deux agences
-      recipients = [EMAILS.guyane, EMAILS.martinique]
-    }
+    // ── Destinataire(s) ── (TEST : tout redirigé vers support@chrixcode.com)
+    const recipients = [TEST_EMAIL]
 
     // ── Sujet ──
     const subject = type === 'devis'
